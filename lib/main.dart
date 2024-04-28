@@ -4,7 +4,18 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp( MaterialApp(
-    home: Scaffold( // <- Equivalente a un contenedor para las demas componentes (Widgtes)
+    home: Home(),
+  ));
+}
+
+// Widgets == Clases
+class Home extends StatelessWidget{
+  const Home({super.key});
+
+  //El override redefine el metodo build de la clase padre
+  @override
+  Widget build(BuildContext context){
+    return Scaffold( // <- Equivalente a un contenedor para las demas componentes (Widgtes)
       appBar: AppBar(
         title: Text("my first app"),
         centerTitle: true,
@@ -25,11 +36,11 @@ void main() {
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},
         backgroundColor: Colors.yellow,
-        child:  Text("click"),
+        child:  Text("click me"),
       ),
       
-    ),
-  ));
+    );
+  }
 }
 
  
