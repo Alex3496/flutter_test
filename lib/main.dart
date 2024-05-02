@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
 
@@ -22,10 +22,18 @@ class Home extends StatelessWidget{
         backgroundColor: Colors.red[100],
       ),
       body: Center(
-        child: Image(
-          image: AssetImage('images/gal.png')
-          //image: NetworkImage('https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?q=80&w=1571&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
-        ),
+        child: MaterialButton(
+          onPressed: () => {
+            print("you click me")
+          },
+          color: Colors.lightBlue,
+          child: Text("click me"),
+        )
+        //child: Icon(
+        //  Icons.airport_shuttle,
+        //  color: Colors.amberAccent,
+        //  size: 50,
+        //)
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},
