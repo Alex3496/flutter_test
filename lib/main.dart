@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
+import 'ui/public/login.dart';
 
 void main() {
   runApp( MaterialApp(
-    home: Home(),
+    home: Login(),
   ));
 }
 
